@@ -1,0 +1,53 @@
+/* Police locale (fichier dans src/assets/fonts/) */
+@font-face {
+  font-family: 'TitleFont';
+  src: url('./assets/fonts/Tangerine/Tangerine-Regular.ttf');
+}
+@font-face {
+  font-family: 'ParagraphFont';
+  src: url('./assets/fonts/BJCree/BJCree-Regular.ttf');
+}
+
+:root {
+  --bg: #000000;
+  --text: #ffffff;
+  --highlight: #e7e7e72b;
+
+  --page-spacing: 10vw;
+  --subtilte-left-spacing: 300px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'ParagraphFont', sans-serif;
+  line-height: 1.5;
+}
+
+h1 {
+  font: 300 100px 'TitleFont';
+  margin-bottom: 0%;
+  padding-left: var(--page-spacing);
+}
+
+h2 {
+  font: 600 30px 'TitleFont';
+  margin-top: 0%;
+  padding-left: var(--subtilte-left-spacing);
+}
+
+::selection {
+  background: var(--highlight);
+  color: var(--text);
+}
+
+@media (max-width: 768px) {
+  :root {
+    --subtilte-left-spacing: 100px;
+  }
+}

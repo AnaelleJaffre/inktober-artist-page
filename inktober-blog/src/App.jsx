@@ -5,7 +5,8 @@ function App() {
 
   return (
     <>
-    <h1>Hi!</h1>
+    <h1>Inktober</h1>
+    <h2>By Amonshage</h2>
     </>
   )
 }
