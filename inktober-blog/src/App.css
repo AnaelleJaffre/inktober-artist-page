@@ -26,19 +26,28 @@ body {
   background: var(--bg);
   color: var(--text);
   font-family: 'ParagraphFont', sans-serif;
-  line-height: 1.5;
+  margin: 0 var(--page-spacing);
 }
 
 h1 {
   font: 300 100px 'TitleFont';
   margin-bottom: 0%;
-  padding-left: var(--page-spacing);
 }
 
 h2 {
   font: 600 30px 'TitleFont';
   margin-top: 0%;
   padding-left: var(--subtilte-left-spacing);
+}
+
+footer {
+  margin: 0%;
+  margin-top: 20vh;
+  bottom: 0%;
+  width: 100%;
+  position: static;
+  font-size: small;
+  justify-items: center;
 }
 
 ::selection {
