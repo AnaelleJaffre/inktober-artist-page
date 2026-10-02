@@ -1,0 +1,27 @@
+.wheats {
+    position: fixed;
+    z-index: 100;
+    bottom: -20px;
+    left: 0%;
+    height: 20vh;
+    width: 100%;
+    justify-content: space-around;
+    padding: 0 4vw;
+
+    img {
+        max-height: 100%;
+        animation: infinite 5s wind;
+        transition: transform 0.5s ease-in-out;
+        transform-origin: bottom center;
+
+        &:hover {
+            transform: rotateZ(10deg);
+        }
+    }
+}
+
+@keyframes wind {
+    0% {transform: rotateZ(0deg);}
+    50% {transform: rotateZ(20deg);}
+    80% {transform: rotateZ(0deg);}
+}

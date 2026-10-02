@@ -1,6 +1,7 @@
 import { useState } from 'react'
-import Folder from './components/Folder/Folder'
 import './App.css'
+import Folder from './components/Folder/Folder'
+import Wheats from './components/Wheats/Wheats'
 
 function App() {
 
@@ -10,6 +11,8 @@ function App() {
     <h2>By Amonshage</h2>
 
     <Folder></Folder>
+
+    <Wheats></Wheats>
 
     <footer>
       <p>© 2026 | All rights reserved</p>

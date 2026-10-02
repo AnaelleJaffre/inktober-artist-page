@@ -16,3 +16,13 @@ Following commands are available (see the scripts in package.json):
 - lint
 - build
 - deploy
+
+## Next steps
+
+1. Simplify assets access from components. For now, the path is hard-written.
+2. Add other artworks.
+3. Add thumbnails to enlighten the loading.
+4. Add an option to see the image in quality.
+5. Decorate.
+6. Open and close folders.
+7. Automatise artowks display with their information.
