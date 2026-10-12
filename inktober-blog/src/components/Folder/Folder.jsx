@@ -10,7 +10,7 @@ function Folder({year}) {
         <h3>{year}</h3>
         <div>
           {getArtworks(year).map((artwork) => (
-            <Artwork key={artwork.name} src={artwork.src} title={artwork.name} />
+            <Artwork key={artwork.name} src={artwork.src} day={artwork.day} theme={artwork.theme} />
           ))}
         </div>
     </div>

@@ -1,4 +1,27 @@
-.artworkImage {
-    height: 20vh;
-    border-radius: 2px;
+.artwork {
+    width: 20vh;
+    margin: 2vw;
+
+    .artworkImage {
+        width: 100%;
+        max-width: fit-content;
+        border-radius: 2px;
+    }
+
+    p {
+        width: 100%;
+        text-align: center;
+        text-transform: capitalize;
+    }
+
+    .separator {
+        margin-top: -18px;
+        margin-bottom: -8px;
+    }
+}
+
+@media (max-width: 768px) {
+  .artwork {
+    max-width: 15vh;
+  }
 }

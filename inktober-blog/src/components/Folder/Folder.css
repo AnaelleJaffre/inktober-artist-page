@@ -1,10 +1,17 @@
 .folder {
     margin-top: 10vh;
     width: 100%;
-
+    
     > div {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
+        justify-items: center;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(24vh, 1fr));
+        align-content: space-around;
     }
+}
+
+@media (max-width: 768px) {
+  .folder > div {
+    grid-template-columns: repeat(auto-fit, minmax(16vh, 1fr));
+  }
 }
