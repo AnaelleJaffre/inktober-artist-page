@@ -1,14 +1,17 @@
 import { useState } from 'react'
 import './Folder.css'
 import Artwork from '../Artwork/Artwork'
+import { getArtworks } from '../../utils/getArtworks'
 
-function Folder() {
+function Folder({year}) {
 
   return (
     <div className='folder'>
-        <p>Folder</p>
+        <h3>{year}</h3>
         <div>
-            <Artwork></Artwork>
+          {getArtworks(year).map((artwork) => (
+            <Artwork key={artwork.name} src={artwork.src} title={artwork.name} />
+          ))}
         </div>
     </div>
   )

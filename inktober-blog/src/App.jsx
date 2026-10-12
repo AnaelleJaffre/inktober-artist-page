@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import Folder from './components/Folder/Folder'
 import Wheats from './components/Wheats/Wheats'
+import { years } from './utils/getArtworks'
 
 function App() {
 
@@ -10,7 +11,7 @@ function App() {
     <h1>Inktober</h1>
     <h2>By Amonshage</h2>
 
-    <Folder></Folder>
+    {years.map((year) => <Folder key={year} year={year}/>)}
 
     <Wheats></Wheats>
 
