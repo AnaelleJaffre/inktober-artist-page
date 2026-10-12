@@ -19,10 +19,9 @@ Following commands are available (see the scripts in package.json):
 
 ## Next steps
 
-1. Simplify assets access from components. For now, the path is hard-written.
-2. Add other artworks.
-3. Add thumbnails to enlighten the loading.
-4. Add an option to see the image in quality.
-5. Decorate.
-6. Open and close folders.
-7. Automatise artowks display with their information.
+1. Add other artworks.
+2. Add thumbnails to enlighten the loading.
+3. Add an option to see the image in quality.
+4. Decorate.
+5. Open and close folders.
+6. Automatise artowks display with their information.

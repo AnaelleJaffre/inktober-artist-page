@@ -1,3 +1,10 @@
 .folder {
     margin-top: 10vh;
+    width: 100%;
+
+    > div {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
 }
