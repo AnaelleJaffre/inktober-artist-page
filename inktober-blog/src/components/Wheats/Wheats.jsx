@@ -8,22 +8,6 @@ const images = Object.values(
   })
 )
 
-const WHEAT_WIDTH = 90 // Average wheat width (px)
-
-function randomWheats(count) {
-  return Array.from({ length: count }, () =>
-    images[Math.floor(Math.random() * images.length)]
-  )
-}
-
-function Wheats() {
-  const [wheats, setWheats] = useState([])
-
-  useEffect(() => {
-    const count = Math.floor((window.innerWidth * 0.7) / WHEAT_WIDTH)
-    setWheats(randomWheats(count))
-  }, [])
-
 const MOVE = [
   { transform: 'rotateZ(0deg)' },
   { transform: 'rotateZ(12deg)' },
@@ -37,10 +21,36 @@ const move = (e) =>
     composite: 'add',
   })
 
+function randomWheats(count) {
+  return Array.from({ length: count }, () => ({
+    src: images[Math.floor(Math.random() * images.length)],
+    left: Math.random() * 100,
+    delay: Math.random() * -5,
+    height: 60 + Math.random() * 100,
+  }))
+}
+
+function Wheats() {
+  const [wheats, setWheats] = useState([])
+
+  useEffect(() => {
+    const count = Math.max(0, Math.floor(window.innerWidth/40))
+    setWheats(randomWheats(count))
+  }, [])
+
   return (
     <div className="wheats">
-      {wheats.map((src, i) => (
-        <img key={i} src={src} alt="wheats" onMouseEnter={move} style={{ animationDelay: `${Math.random() * -5}s` }}/>
+      {wheats.map((w, i) => (
+      <img
+        key={i}
+        src={w.src}
+        alt="wheats"
+        onMouseEnter={move}
+        style={{ left: `${w.left}%`,
+          animationDelay: `${w.delay}s`,
+          height:`${w.height}px`,
+          bottom: 0}}
+      />
       ))}
     </div>
   )
