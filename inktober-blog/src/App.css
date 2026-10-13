@@ -48,6 +48,7 @@ footer {
   position: static;
   font-size: small;
   justify-items: center;
+  z-index: 200;
 }
 
 ::selection {

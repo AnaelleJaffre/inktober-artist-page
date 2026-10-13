@@ -24,10 +24,23 @@ function Wheats() {
     setWheats(randomWheats(count))
   }, [])
 
+const MOVE = [
+  { transform: 'rotateZ(0deg)' },
+  { transform: 'rotateZ(12deg)' },
+  { transform: 'rotateZ(0deg)' },
+]
+
+const move = (e) =>
+  e.currentTarget.animate(MOVE, {
+    duration: 600,
+    easing: 'ease-out',
+    composite: 'add',
+  })
+
   return (
     <div className="wheats">
       {wheats.map((src, i) => (
-        <img key={i} src={src} alt="wheats" />
+        <img key={i} src={src} alt="wheats" onMouseEnter={move} style={{ animationDelay: `${Math.random() * -5}s` }}/>
       ))}
     </div>
   )
