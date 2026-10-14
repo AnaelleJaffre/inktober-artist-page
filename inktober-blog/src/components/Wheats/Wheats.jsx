@@ -12,7 +12,7 @@ const images = Object.values(
 
 // Sound parametrisation
 const wheatHoverSound = new Audio(wheatSound)
-wheatHoverSound.volume = 0.1
+wheatHoverSound.volume = 0.3
 const COOLDOWN = 400 // ms
 let lastPlay = 0
 
