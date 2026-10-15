@@ -4,6 +4,8 @@ import Folder from './components/Folder/Folder'
 import Wheats from './components/Wheats/Wheats'
 import { years } from './utils/getArtworks'
 import backgroundTheme from './assets/sound/background_theme.mp3'
+import soundOnIcon from './assets/images/utils/sound_on.png'
+import soundOffIcon from './assets/images/utils/no_sound.png'
 
 const backgroundSound = new Audio(backgroundTheme)
 backgroundSound.loop = true
@@ -23,8 +25,8 @@ function App() {
   return (
     <>
 
-    <button onClick={toggleMusic}>
-      {playing ? '🔇' : '🔊'}
+    <button className='musicButton' onClick={toggleMusic}>
+      <img src={playing ? soundOnIcon : soundOffIcon}  alt={playing ? 'Sound OFF' : 'Sound ON'}></img>
     </button>
 
     <h1>Inktober</h1>

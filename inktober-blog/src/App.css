@@ -40,6 +40,25 @@ h2 {
   padding-left: var(--subtilte-left-spacing);
 }
 
+.musicButton {
+  position: fixed;
+  z-index: 10;
+  top: 3vh;
+  left: 5vw;
+  height: 30px;
+  background-color: #00000000;
+  border: none;
+
+  &:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+  }
+
+  img {
+    height: 100%;
+  }
+}
+
 footer {
   margin: 0%;
   margin-top: 20vh;
