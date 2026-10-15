@@ -1,8 +1,20 @@
 .folder {
     margin-top: 10vh;
     width: 100%;
+
+    .toggleHeader {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin-bottom: 2vh;
+
+      > img {
+        height: 16px;
+        margin: 0 2vw;
+      }
+    }
     
-    > div {
+    .artworksGrid {
         justify-items: center;
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(24vh, 1fr));
@@ -11,7 +23,7 @@
 }
 
 @media (max-width: 768px) {
-  .folder > div {
-    grid-template-columns: repeat(auto-fit, minmax(16vh, 1fr));
+  .folder > .artworksGrid {
+    grid-template-columns: repeat(auto-fit, minmax(17vh, 1fr));
   }
 }
