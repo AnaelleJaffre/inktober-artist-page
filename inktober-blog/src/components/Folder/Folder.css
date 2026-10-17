@@ -24,7 +24,7 @@
   .artworksWrapper {
     display: grid;
     grid-template-rows: 1fr;
-    transition: grid-template-rows 2s ease-in-out;
+    transition: grid-template-rows 0.3s ease-in-out;
   }
 
   .artworksGrid {
@@ -34,20 +34,24 @@
     display: grid;
     align-content: space-around;
     grid-template-columns: repeat(auto-fit, minmax(24vh, 1fr));
+    transition: visibility 0s;
   }
 
   .artwork {
-    transition: transform 0.2s ease-in, opacity 0.2s ease-in;
+    transition: transform 0.4s ease-in, opacity 0.4s ease-in;
     transition-delay: calc(var(--i) * 70ms);
   }
 
   &.closed {
     .artworksWrapper {
       grid-template-rows: 0fr;
+      transition: grid-template-rows 0.3s ease-in-out 1s;
     }
     .artwork {
-      transform: translateY(-100%) rotate(-40deg);
+      transform: translateY(-100%) rotate(-40deg) scale(0.6);
       opacity: 0;
+      transition: transform 0.4s ease-in, opacity 0.4s ease-in;
+      transition-delay: calc(var(--i) * 70ms);
     }
     .artworksGrid {
       visibility: hidden;
