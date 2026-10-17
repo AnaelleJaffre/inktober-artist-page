@@ -1,37 +1,64 @@
 .folder {
-    margin-top: 10vh;
-    width: 100%;
+  margin-top: 10vh;
+  width: 100%;
 
-    .toggleHeader {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      margin-bottom: 2vh;
-      cursor: pointer;
+  .toggleHeader {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 2vh;
+    cursor: pointer;
 
-      .arrow {
-        height: 16px;
-        margin: 0 2vw;
-        transition: transform 0.3s ease-in-out;
-        transform: rotateZ(90deg);
-        
-      }
-
-      .closed {
+    .arrow {
+      height: 16px;
+      margin: 0 2vw;
+      transition: transform 0.3s ease-in-out;
+      transform: rotateZ(90deg);
+      
+      &.closed {
         transform: rotateZ(0deg);
       }
     }
-    
-    .artworksGrid {
-        justify-items: center;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(24vh, 1fr));
-        align-content: space-around;
+  }
+
+  .artworksWrapper {
+    display: grid;
+    grid-template-rows: 1fr;
+    transition: grid-template-rows 2s ease-in-out;
+  }
+
+  .artworksGrid {
+    min-height: 0;
+    overflow: hidden;
+    justify-items: center;
+    display: grid;
+    align-content: space-around;
+    grid-template-columns: repeat(auto-fit, minmax(24vh, 1fr));
+  }
+
+  .artwork {
+    transition: transform 0.2s ease-in, opacity 0.2s ease-in;
+    transition-delay: calc(var(--i) * 70ms);
+  }
+
+  &.closed {
+    .artworksWrapper {
+      grid-template-rows: 0fr;
     }
+    .artwork {
+      transform: translateY(-100%) rotate(-40deg);
+      opacity: 0;
+    }
+    .artworksGrid {
+      visibility: hidden;
+      transition: visibility 0s 1s;
+    }
+  }
 }
 
+
 @media (max-width: 768px) {
-  .folder > .artworksGrid {
+  .folder .artworksGrid {
     grid-template-columns: repeat(auto-fit, minmax(17vh, 1fr));
   }
 }
