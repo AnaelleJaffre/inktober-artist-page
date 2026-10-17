@@ -6,17 +6,22 @@ import arrow from '../../assets/images/utils/arrow.png'
 
 function Folder({year}) {
 
+  const[open, setOpen] = useState(true)
+
   return (
     <div className='folder'>
-        <div className='toggleHeader'>
-          <img src={arrow}></img>
+        <div className='toggleHeader' onClick={() => setOpen(!open)}>
+          <img src={arrow} alt="arrow" className={open ? 'arrow' : 'arrow closed'}></img>
           <h3>{year}</h3>
         </div>
-        <div className='artworksGrid'>
-          {getArtworks(year).map((artwork) => (
-            <Artwork key={artwork.name} src={artwork.src} day={artwork.day} theme={artwork.theme} />
-          ))}
-        </div>
+
+        {open && (
+          <div className='artworksGrid'>
+            {getArtworks(year).map((artwork) => (
+              <Artwork key={artwork.name} src={artwork.src} day={artwork.day} theme={artwork.theme} />
+            ))}
+          </div>
+        )}
     </div>
   )
 }
