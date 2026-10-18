@@ -1,0 +1,27 @@
+.foreground {
+    position: fixed;
+    inset: 0;
+    z-index: 200;
+    display: grid;
+    place-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(3px);
+    transition: 0.2s ease-in;
+
+    figure {
+        text-align: center;
+        color: white;
+
+        figcaption {
+            margin-top: 16px;
+            text-transform: capitalize;
+        }
+    }
+
+    img {
+        max-height: 80vh;
+        max-width: 100%;
+        object-fit: contain;
+        border-radius: 5px;
+    }
+}
