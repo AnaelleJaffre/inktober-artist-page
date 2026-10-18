@@ -19,8 +19,7 @@ Following commands are available (see the scripts in package.json):
 
 ## Next steps
 
-1. Add other artworks.
-2. Add thumbnails to enlighten the loading.
-3. Add an option to see the image in quality.
-4. Decorate.
-5. Open and close folders.
+1. Add thumbnails to lighten the loading.
+2. Make something better for the reshaping of the artworks on hover.
+3. Decorate.
+4. Bugfix: music starts after an interaction even if it's disabled... it shouldn't.
