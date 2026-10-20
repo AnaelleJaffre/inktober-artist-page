@@ -37,7 +37,7 @@ function App() {
     <Wheats></Wheats>
 
     <footer>
-      <p>© 2026 | All rights reserved</p>
+      <p>© Amonshage - 2026 | All rights reserved</p>
     </footer>
     </>
   )
